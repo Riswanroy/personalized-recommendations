@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Personalized Product Recommendation</title>
+
+    <!-- slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- <script src="app.js"></script> -->
+    <script src="assets/js/Item.js"></script>
+
+    <script src="assets/js/Product-Section.js"></script>
+
+    <script src="assets/js/ViewUserRecommended.js"></script>
+
+    <script src="assets/js/ViewOtherRecommendation.js"></script>
+
+    <script src="assets/js/ViewProducts.js"></script>
+  </head>
+
+  <body>
+    <!-- <form action="/recommend" method="post">
+      <button type="submit">Hello</button>
+    </form> -->
+
+    <section class="shop_section layout_padding">
+      <div class="container">
+        <div class="heading_container heading_center">
+          <h2 id="selectedOption"></h6>
+          <select name="USER" id="USER" onchange="changeUser()">
+            <option value="">SELECT A USER</option>
+            <option value="A">User A</option>
+            <option value="B">User B</option>
+            <option value="C">User C</option>
+          </select>
+          <br><br>
+          <form action="/Reset-Recommendation" method="post">
+            <button type="submit" class="custom-button">Reset Recommendation</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- shop section -->
+    <form action="/select-product" method="post">
+      <section class="shop_section layout_padding">
+        <div class="container">
+          <div class="heading_container heading_center">
+            <h2>Latest Products</h2>
+          </div>
+          <div class="row"></div>
+          <div class="btn-box">
+            <a id="btn">View All Products</a>
+          </div>
+        </div>
+      </section>
+    </form>
+
+    <!-- end shop section -->
+    <div class="flex">
+      <section class="recommend_section layout_padding">
+        <div class="recommendation-box">
+          <div class="container">
+            <div class="heading_container heading_center">
+              <h2>recommendation</h2>
+            </div>
+            <div class="recommended-row"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="separator"></div>
+
+      <!-- end recommendation section -->
+      <section class="recommend_section layout_padding">
+        <div class="recommendation-box">
+          <div class="container">
+            <div class="heading_container heading_center">
+              <h2>Users with similar interests...</h2>
+            </div>
+            <div class="other-recommended-row"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- start recommendation section -->
+    
+    <!-- end shop section -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  </body>
+</html>

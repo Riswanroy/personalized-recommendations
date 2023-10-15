@@ -1,0 +1,37 @@
+use recommendation;
+CREATE TABLE users (
+    user_id INT PRIMARY KEY,
+    username VARCHAR(255),
+    age INT,
+    gender VARCHAR(10)
+);
+
+CREATE TABLE categories (
+    category_id INT PRIMARY KEY,
+    category_name VARCHAR(50)
+);
+
+CREATE TABLE products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(255),
+    category_id INT,
+    price DECIMAL(10, 2),
+    FOREIGN KEY (category_id) REFERENCES categories(category_id)
+);
+
+
+CREATE TABLE interactions (
+    interaction_id INT PRIMARY KEY,
+    user_id INT,
+    product_id INT,
+    interaction_type VARCHAR(20),
+    timestamp DATETIME,
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (product_id) REFERENCES products(product_id)
+);
+
+DROP TABLE users;
+DROP TABLE categories;
+DROP TABLE products;
+DROP TABLE interactions;
+

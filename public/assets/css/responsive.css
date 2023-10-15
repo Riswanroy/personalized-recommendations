@@ -1,0 +1,25 @@
+@media (max-width: 1120px) {
+  .saving_section .detail-box {
+    padding: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact_section {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .saving_section .detail-box,
+  .gift_section .detail-box {
+    padding: 0 5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
